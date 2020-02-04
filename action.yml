@@ -1,0 +1,13 @@
+name: "effx sync"
+description: "Sync data to effx with config files."
+inputs:
+  directory:
+    description: "Directory for effx config files."
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - "sync"
+    - "--dir"
+    - ${{ inputs.directory }}
