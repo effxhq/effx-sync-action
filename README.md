@@ -29,7 +29,7 @@ jobs:
 📁 **`directory`** _(required)_ - The relative path to the directory containing configuration files you'd like synced.\
 🔑 **`EFFX_API_KEY`** _(required)_ - Your effx API key.
 
-Setting `directory` to `${{ github.workspace }}` enables syncing of **all** `effx.yaml` files in a given repo.
+Setting `directory` to `/github/workspace` enables syncing of **all** `effx.yaml` files in a given repo.
 
 ### Workflow
 
