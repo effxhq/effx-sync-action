@@ -29,16 +29,17 @@ jobs:
 📁 **`directory`** _(required)_ - The relative path to the directory containing configuration files you'd like synced.\
 🔑 **`EFFX_API_KEY`** _(required)_ - Your effx API key.
 
-Setting `directory` to `/github/workspace` enables syncing of **all** `effx.yaml` files in a given repo.
+Setting `directory` to `/github/workspace` enables syncing of **all** files with the suffix `effx.yaml` in your repo.
 
 ### Workflow
 
 1. Add this action to your repo.
-2. Add your effx API key by
+2. Head over to the **[effx website](https://app.effx.com/account_settings)**, navigate to **Account Settings** and find your API key.
+3. Add your effx API key by
    - navigating to your repo's settings
    - selecting **Secrets** from the side bar
    - typing **`EFFX_API_KEY`** into the name field
    - pasting your effx API key into the value field
-3. The **`yml`** file for **`effx-sync-action`** will live in **`.github/workflows`**.
-4. Create a file named, **`effx.yaml`** and populate it with configurations.
-5. On pushing to **`master`**, **`effx-sync-action`** will parse your configuration file or directory. 🥳
+4. The **`yml`** file for **`effx-sync-action`** will live in **`.github/workflows`**.
+5. Create a file named, **`effx.yaml`** and populate it with configurations.
+6. On pushing to **`master`**, **`effx-sync-action`** will parse your configuration file. 🥳
