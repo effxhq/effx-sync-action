@@ -19,7 +19,7 @@ jobs:
       - name: Sync effx configuration with effx account
         uses: effxhq/effx-sync-action@master
         with:
-          directory: ${{ github.workspace }}
+          directory: /github/workspace
         env:
           EFFX_API_KEY: ${{ secrets.EFFX_API_KEY }}
 ```
