@@ -5,9 +5,11 @@ inputs:
     description: "Directory for effx config files."
     required: true
 runs:
-  using: "docker"
-  image: "Dockerfile"
-  args:
-    - "sync"
-    - "--dir"
-    - ${{ inputs.directory }}
+  using: "composite"
+  steps:
+    - name: Download CLI
+      run: |
+        curl -Lo effx https://effx-cli.s3-us-west-2.amazonaws.com/releases/latest/effx-cli_Linux_x86_64
+        sudo install effx /usr/local/bin
+    - name: Sync all Effx Yaml files
+      run: effx sync -d ${{ inputs.directory }}

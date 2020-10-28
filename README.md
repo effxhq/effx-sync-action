@@ -12,7 +12,7 @@ on:
       - master
 
 jobs:
-  build:
+  sync:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -41,5 +41,5 @@ Setting `directory` to `/github/workspace` enables syncing for **all** files wit
    - typing **`EFFX_API_KEY`** into the name field
    - pasting your effx API key into the value field
 4. The **`yml`** file for **`effx-sync-action`** will live in **`.github/workflows`**.
-5. Create a file named, **`effx.yaml`** and populate it with configurations.
+5. Create a file named, **`effx.yaml`** or matching **`*.effx.yaml`**and populate it with configurations.
 6. On pushing to **`master`**, **`effx-sync-action`** will parse your configuration file. 🥳
