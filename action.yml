@@ -10,7 +10,7 @@ runs:
     - name: Download CLI
       shell: bash
       run: |
-        curl -Lo effx https://effx-cli.s3-us-west-2.amazonaws.com/releases/latest/effx-cli_Linux_x86_64
+        curl -Lo effx https://effx.run/effx-cli/releases/latest/effx-cli_Linux_x86_64
         sudo install effx /usr/local/bin
     - name: Sync all Effx Yaml files
       shell: bash
