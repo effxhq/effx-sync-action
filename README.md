@@ -15,9 +15,9 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Sync effx configuration with effx account
-        uses: effxhq/effx-sync-action@master
+        uses: effxhq/effx-sync-action@v1
         with:
           directory: ${GITHUB_WORKSPACE}
         env:
